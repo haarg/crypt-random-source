@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Base::File;
 # ABSTRACT: File (or device) random data sources
 
-use Any::Moose;
+use Moo;
 
 use Carp qw(croak);
 

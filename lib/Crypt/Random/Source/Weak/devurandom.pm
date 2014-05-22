@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Weak::devurandom;
 # ABSTRACT: A weak random data source using F</dev/urandom>
 
-use Any::Moose;
+use Moo;
 
 extends qw(
     Crypt::Random::Source::Weak

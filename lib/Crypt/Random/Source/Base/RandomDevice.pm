@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Base::RandomDevice;
 # ABSTRACT: Base class for random devices
 
-use Any::Moose;
+use Moo;
 
 extends qw(Crypt::Random::Source::Base::File);
 

@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Base;
 # ABSTRACT: Abstract base class for L<Crypt::Random::Source> classes
 
-use Any::Moose;
+use Moo;
 
 sub available { 0 }
 

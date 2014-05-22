@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Strong::devrandom;
 # ABSTRACT: A strong random data source using F</dev/random>
 
-use Any::Moose;
+use Moo;
 
 extends qw(
     Crypt::Random::Source::Strong

@@ -1,7 +1,7 @@
 package Crypt::Random::Source::Strong;
 # ABSTRACT: Abstract base class for strong random data sources
 
-use Any::Moose;
+use Moo;
 
 sub is_strong { 1 }
 

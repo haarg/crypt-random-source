@@ -1,7 +1,8 @@
 package Crypt::Random::Source::Base::Handle;
 # ABSTRACT: L<IO::Handle> based random data sources
 
-use Any::Moose;
+use Moo;
+use Types::Standard qw(Bool);
 
 use Errno qw(EWOULDBLOCK);
 
@@ -11,7 +12,7 @@ use IO::Handle;
 extends qw(Crypt::Random::Source::Base);
 
 has allow_under_read => (
-    isa => "Bool",
+    isa => Bool,
     is  => "rw",
     default => 0,
 );
@@ -23,9 +24,10 @@ has reread_attempts => (
 
 has handle => (
     is => "rw",
+    lazy => 1,
+    builder => 1,
     predicate  => "has_handle",
     clearer    => "clear_handle",
-    lazy_build => 1,
 );
 
 sub blocking { shift->handle->blocking(@_) }
